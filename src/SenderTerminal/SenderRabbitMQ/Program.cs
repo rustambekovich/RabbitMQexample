@@ -14,7 +14,7 @@ class Program
         using (var channel = connection.CreateModel())
         {
             channel.QueueDeclare(queue: "first",
-                                 durable: false,
+                                 durable: true,
                                  exclusive: false,
                                  autoDelete: false,
                                  arguments: null);
