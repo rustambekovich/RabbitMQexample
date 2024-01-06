@@ -4,5 +4,5 @@ namespace SenderRabbitMQ.WebApi.Service.Interfaces;
 
 public interface IProducerService
 {
-    public Task SendAsync(Massage massage);
+    public void Send(Massage massage);
 }

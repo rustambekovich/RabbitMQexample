@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34302.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SenderRabbitMQ", "src\SenderTerminal\SenderRabbitMQ\SenderRabbitMQ.csproj", "{221B553E-57EA-4E1E-B2DD-82EAA2F6310F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SenderRabbitMQ", "src\SenderTerminal\SenderRabbitMQ\SenderRabbitMQ.csproj", "{221B553E-57EA-4E1E-B2DD-82EAA2F6310F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReseiverRabbitMQ", "src\ReseiverTerminal\ReseiverRabbitMQ\ReseiverRabbitMQ.csproj", "{91C16FC5-6AE1-4966-9D62-F895A4B81995}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReseiverRabbitMQ", "src\ReseiverTerminal\ReseiverRabbitMQ\ReseiverRabbitMQ.csproj", "{91C16FC5-6AE1-4966-9D62-F895A4B81995}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SenderRabbitMQ.WebApi", "src\SenderWeb\SenderRabbitMQ.WebApi\SenderRabbitMQ.WebApi.csproj", "{7104DD26-20AA-4985-9353-7750E03B0402}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SenderRabbitMQ.WebApi", "src\SenderWeb\SenderRabbitMQ.WebApi\SenderRabbitMQ.WebApi.csproj", "{7104DD26-20AA-4985-9353-7750E03B0402}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResiverRabbitMQ.WebApi", "src\ReseiverWeb\ResiverRabbitMQ.WebApi\ResiverRabbitMQ.WebApi.csproj", "{4CA09B13-A5D2-423A-9048-E362D2DF7557}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{7104DD26-20AA-4985-9353-7750E03B0402}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7104DD26-20AA-4985-9353-7750E03B0402}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7104DD26-20AA-4985-9353-7750E03B0402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CA09B13-A5D2-423A-9048-E362D2DF7557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CA09B13-A5D2-423A-9048-E362D2DF7557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CA09B13-A5D2-423A-9048-E362D2DF7557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CA09B13-A5D2-423A-9048-E362D2DF7557}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

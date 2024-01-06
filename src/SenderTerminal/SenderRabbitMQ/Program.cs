@@ -14,14 +14,13 @@ class Program
         using (var channel = connection.CreateModel())
         {
             channel.QueueDeclare(queue: "first",
-                                 durable: true,
+                                 durable: false,
                                  exclusive: false,
                                  autoDelete: false,
                                  arguments: null);
 
             Console.Write("Enter massage: ");
             string message = Console.ReadLine()!;
-
             var request = Encoding.UTF8.GetBytes(message);
 
             channel.BasicPublish(exchange: "",
@@ -29,15 +28,13 @@ class Program
                                  basicProperties: null,
                                  body: request);
 
+
+
             Console.WriteLine("Massage send rabbitMQ");
         }
 
-        Console.WriteLine("1. Exit application.\n" +
-                          "2.Back to the beginning.");
-        Console.Write("Number: ");
-        int step = int.Parse(Console.ReadLine()!);
-
-        if (step == 2)
-            Main(args);
+        Main(args);
     }
 }
+
+

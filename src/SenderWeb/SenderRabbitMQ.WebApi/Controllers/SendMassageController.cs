@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SenderRabbitMQ.WebApi.Service.Dto;
+using SenderRabbitMQ.WebApi.Service.Interfaces;
 
 namespace SenderRabbitMQ.WebApi.Controllers;
 
@@ -6,12 +8,18 @@ namespace SenderRabbitMQ.WebApi.Controllers;
 [ApiController]
 public class SendMassageController : ControllerBase
 {
-    public SendMassageController()
+    private IProducerService _service;
+
+    public SendMassageController(IProducerService service)
     {
-        
+        _service = service;
     }
 
     [HttpPost]
-    public IActionResult SendMassage(string massage)
-        => Ok();
+    public IActionResult SendMassage([FromForm] Massage massage)
+    {
+        _service.Send(massage);
+
+        return Ok();
+    }
 }

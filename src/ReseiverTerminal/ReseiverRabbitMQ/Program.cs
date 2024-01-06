@@ -1,9 +1,12 @@
-﻿using RabbitMQ.Client;
+﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Running;
+using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System.Text;
 
 class Program
 {
+    [Benchmark]
     public static void Main(string[] args)
     {
         var factory = new ConnectionFactory()
@@ -15,7 +18,7 @@ class Program
         using (var channel = connection.CreateModel())
         {
             channel.QueueDeclare(queue: "first",
-                                 durable: true,
+                                 durable: false,
                                  exclusive: false,
                                  autoDelete: false,
                                  arguments: null);
